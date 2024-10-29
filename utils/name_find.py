@@ -11,7 +11,12 @@ from urllib.parse import urlparse, parse_qs
 
 def get_player_name(player_name):
     try:
+        print("in python func")
+
         source = requests.get(f"https://www.google.com/search?q={player_name}%20cricinfo").text
+
+        print("in google page")
+
         page = BeautifulSoup(source, "lxml")
         page = page.find("div",class_="kCrYT")
         link = page.find("a", href=re.compile(r"[/]([a-z]|[A-Z])\w+")).attrs["href"]    
@@ -26,6 +31,9 @@ def get_player_name(player_name):
         initials = ''.join(name[0] for name in full_name.split(" ")[:-1])
         last_name = full_name.split(" ")[-1]
         parsed_name = f"{initials} {last_name}"
+
+        print("name parsed")
+
         return parsed_name
     except Exception as e:
         return("Name not found")
