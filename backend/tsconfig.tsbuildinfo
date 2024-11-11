@@ -1,0 +1,1 @@
+{"root":["./src/index.ts","./src/controllers/namefind.ts","./src/db/config.ts","./src/db/execution.ts","./src/db/insertdata.ts","./src/db/model.ts","./src/routes/data.ts","./src/routes/index.ts","./src/utils/namefinderhelpers.ts","./types/cors.d.ts","./types/express.d.ts"],"version":"5.6.3"}
