@@ -1,3 +1,6 @@
 dist
 *.txt
 node_modules
+backend/src/db/.env
+.env
+*.ipynb
